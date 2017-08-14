@@ -1,0 +1,67 @@
+body {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  color: white;
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Libre Baskerville', serif;
+}
+
+main {
+  min-height: calc(100vh - 285px);
+  padding: 30px 0;
+}
+
+button.main-button {
+  border: 1px solid $primary;
+  padding: 20px 50px;
+  color: $primary;
+  font-size: 18px;
+  text-align: center;
+  background: none;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+    background: $primary;
+    color: white;
+  }
+}
+
+.btn-secondaction {
+  background: $primary;
+  border: none;
+  color: white;
+  &:hover {
+    background: $primary;
+    opacity: .8;
+  }
+}
+
+.pattern {
+  width: 220px;
+  height: 600px;
+  position: absolute;
+  z-index: -1;
+  margin-top: 165px;
+  &.pattern-left {
+    left: 0;
+    background: url("../public/pattern-left.png") no-repeat;
+    background-size: 220px 1100px;
+  }
+  &.pattern-right {
+    right: 0;
+    background: url("../public/pattern-right.png") no-repeat;
+    background-size: 220px 1100px;
+  }
+}

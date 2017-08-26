@@ -10,14 +10,20 @@ export default class ChatBox extends React.Component {
     return (
       <div className="main-chat-card" id="mainchat-1">
           <div className="row">
-              <div className="col-lg-11 col-md-11 col-sm-10 col-xs-10 message-col">
+              <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div className="card">
-                    <ChatDate date="2017-08-10 14:01"/>
+                    <div className="row top-row">
+                        <div className="col-lg-6">
+                          <ChatProfile name="Harry Smith" company="Weener Berger" position="Weener tester" size={50} />
+                        </div>
+                        <div className="col-lg-6 text-right">
+                          <ChatDate date="2017-08-10 14:01"/>
+                        </div>
+                    </div>
                     <ChatContent />
                     <ChatActionBar />
                   </div>
               </div>
-              <ChatProfile />
           </div>
       </div>
     );

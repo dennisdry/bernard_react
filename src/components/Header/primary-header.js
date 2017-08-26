@@ -12,16 +12,14 @@ export default class PrimaryHeader extends React.Component {
               <div className="row header-row align-items-center">
                   <HeaderLogo />
                   <HeaderMenu />
-                  <ProfilePicture name="Harry Smith"/>
-                  <div className="mobile-menu-open">
-                      <ul className="mobile-menu list-unstyled">
-                          <li>Message Board</li>
-                          <li>Admin</li>
-                      </ul>
+                  <div className="col col-lg-2 hidden-md-down user-profile-wrapper">
+                    <div className="user-profile">
+                      <ProfilePicture name="Harry Smith" size={65} />
+                    </div>
+                  </div>
                   </div>
               </div>
           </div>
-      </div>
     );
   }
 }

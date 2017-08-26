@@ -15,7 +15,8 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Libre Baskerville', serif;
+  font-family: 'Open Sans', sans-serif;
+  color: $dark;
 }
 
 main {
@@ -64,4 +65,8 @@ button.main-button {
     background: url("../public/pattern-right.png") no-repeat;
     background-size: 220px 1100px;
   }
+}
+
+.green-link {
+  color: $primary !important;
 }

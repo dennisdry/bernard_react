@@ -9,7 +9,10 @@ export default class HeaderMenu extends React.Component {
                 Messageboard
               </li>
               <li>
-                Admin
+                Management
+              </li>
+              <li>
+                Settings
               </li>
           </ul>
       </nav>

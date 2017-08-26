@@ -17,10 +17,10 @@ export default class HeaderTodaysInfo extends React.Component {
       <div className="col hidden-md-down">
         <div className="today-info">
             <date className="date">
-                Today is 2017. jun 21. {this.state.date}
+                Today is <a className="green-link" href="#">{this.state.date}</a>. 
             </date>
-            <div className="birthday">
-                Kanye West's birthday. <a href="#">Send him</a> your best wishes!
+            <div className="events">
+                Events for the day: <a className="green-link" href="#">Pipe rapairing on the 4th floor.</a>
             </div>
         </div>
       </div>

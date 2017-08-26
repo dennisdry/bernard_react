@@ -1,6 +1,7 @@
 import React from 'react';
 import { Tooltip } from 'reactstrap';
 import Avatar from 'react-avatar';
+import PropTypes from 'prop-types';
 
 // var strippedUserName = "Harry Smith";
 // strippedUserName = strippedUserName.replace(/\s+/g, '_').toLowerCase();
@@ -38,17 +39,22 @@ export default class ProfilePicture extends React.Component {
 
   render() {
     return (
-      <div className="col col-lg-2 hidden-md-down user-profile-wrapper">
-          <div className="user-profile">
+            <div>
               <div className="image" id="CurrentUserProfilePicture">
-                <Avatar src={this.profilePictureUrl()} name={this.props.name} size={65} round={true} color={'#2C9366'} />
+                <Avatar src={this.profilePictureUrl()} name={this.props.name} size={this.props.size} round={true} color={'#2C9366'} />
               </div>
 
               <Tooltip placement="bottom" isOpen={this.state.tooltipOpen} target="CurrentUserProfilePicture" toggle={this.toggle}>
                 {this.props.name}
               </Tooltip>
-          </div>
-      </div>
+            </div>
     );
   }
 }
+
+ProfilePicture.propTypes = {
+      name: PropTypes.string,
+      company: PropTypes.string,
+      position: PropTypes.string,
+      size: PropTypes.number
+    }

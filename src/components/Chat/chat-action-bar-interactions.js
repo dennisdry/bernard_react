@@ -34,7 +34,6 @@ export default class ActionBarInteractions extends React.Component {
               <span className="text">
                   Reply
               </span>
-              <span className="icon"></span>
           </span>
       </div>
     );

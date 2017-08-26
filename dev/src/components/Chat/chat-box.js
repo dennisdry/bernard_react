@@ -17,7 +17,7 @@ export default class ChatBox extends React.Component {
                           <ChatProfile name="Harry Smith" company="Weener Berger" position="Weener tester" size={50} />
                         </div>
                         <div className="col-lg-6 text-right">
-                          <ChatDate date="2017-08-10 14:01"/>
+                          <ChatDate date="2017-08-26 14:01"/>
                         </div>
                     </div>
                     <ChatContent />

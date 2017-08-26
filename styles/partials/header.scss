@@ -1,0 +1,167 @@
+.header {
+  height: 180px;
+  background: white;
+  color: $dark;
+  @media (max-width: 576px) {
+    height: 125px;
+  }
+  .primary {
+    height: 125px;
+    @media (max-width: 576px) {
+      height: 60px;
+    }
+    .header-row {
+      height: 125px;
+      @media (max-width: 576px) {
+        height: 60px;
+      }
+      .logo {
+        width: 290px;
+        height: 68px;
+        background: url("../public/logo-color.svg") no-repeat;
+        background-size: 290px 68px;
+      }
+      .main-menu {
+        margin: 0;
+        li {
+          display: inline-block;
+          margin: 0 20px;
+          text-transform: uppercase;
+          padding: 10px;
+          a {
+            &:hover {
+              opacity: .8;
+            }
+          }
+          &.active {
+            &:before {
+              content: '';
+              width: 7px;
+              height: 7px;
+              border-radius: 50%;
+              background: $primary;
+              display: inline-block;
+              margin: -0 5px 1px 0;
+            }
+          }
+        }
+      }
+      .user-profile {
+        text-align: right;
+        .image {
+          width: 65px;
+          height: 65px;
+          text-align: right;
+          float: right;
+          img {
+            padding: 3px;
+            -webkit-box-shadow: 0 0 5.5px 0 rgba(0,0,0,.19);
+            box-shadow: 0 0 5.5px 0 rgba(0,0,0,.19);
+            border-radius: 50%;
+            width: 65px;
+            height: 65px;
+            border: 2px solid white;
+          }
+        }
+      }
+      .mobile-menu-wrapper {
+        text-align: right;
+        margin-right: 0;
+        padding-right: 0;
+        .mobile-menu {
+          text-align: right;
+          width: 55px;
+          height: 60px;
+          float: right;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .icon {
+            display: block;
+            width: 30px;
+            height: 30px;
+            svg {
+              fill: white;
+            }
+          }
+          &.active {
+            background: white;
+            .icon {
+              svg {
+                fill: $primary;
+              }
+            }
+          }
+        }
+      }
+      .mobile-menu-open {
+        display: none;
+        padding: 15px;
+        background: white;
+        color: black;
+        width: 100%;
+        position: relative;
+        z-index: 99;
+        -webkit-box-shadow: 0px 10px 18px 0px rgba(50, 50, 50, 0.3);
+        -moz-box-shadow:    0px 10px 18px 0px rgba(50, 50, 50, 0.3);
+        box-shadow:         0px 10px 18px 0px rgba(50, 50, 50, 0.3);
+        .mobile-menu {
+          text-align: center;
+          li {
+            display: block;
+            text-transform: uppercase;
+            margin: 25px 0;
+          }
+        }
+      }
+    }
+  }
+  .secondary {
+    height: 65px;
+    font-size: 12px;
+    .secondary-row {
+      height: 65px;
+      border-top: 1px solid $lightborder;
+      .today-info {
+        color: black;
+        font-size: 14px;
+        text-align: center;
+        font-weight: 100;
+        a {
+          font-weight: bold;
+        }
+        div {
+          display: inline-block;
+          margin: 0 5px;
+        }
+      }
+      // .upcoming-events {
+      //   @media (max-width: 576px) {
+      //     text-align: center !important;
+      //   }
+      //   color: black;
+      //   p {
+      //     margin: 0;
+      //   }
+      //   .new-notification {
+      //     cursor: pointer;
+      //     a {
+      //       color: black;
+      //       cursor: pointer;
+      //     }
+      //     .icon {
+      //       display: inline-block;
+      //       width: 30px;
+      //       height: 20px;
+      //       background: url("../public/stats.svg") no-repeat;
+      //       background-size: 30px 20px;
+      //     }
+      //     .text {
+      //       display: inline-block;
+      //       font-weight: bold;
+      //     }
+      //   }
+      // }
+    }
+  }
+}

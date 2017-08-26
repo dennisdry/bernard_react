@@ -7,6 +7,8 @@ export default class ChatList extends React.Component {
     return (
       <div className="chat-main">
           <ChatBox />
+          <ChatBox />
+          <ChatBox />
       </div>
     );
   }

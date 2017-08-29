@@ -2,9 +2,6 @@
   "name": "react-webpack-babel",
   "version": "0.0.4",
   "description": "React Webpack Babel Starter Kit",
-  "engines": {
-    "node": "6.11.1"
-  },
   "main": "''",
   "scripts": {
     "build": "webpack --config webpack.production.config.js --progress --profile --colors",
@@ -21,6 +18,9 @@
   "license": "MIT",
   "homepage": "https://github.com/alicoding/react-webpack-babel#readme",
   "dependencies": {
+    "axios": "^0.16.2",
+    "ejs": "2.5.6",
+    "express": "4.15.2",
     "moment": "^2.18.1",
     "node-sass": "^4.3.0",
     "prop-types": "^15.5.10",
@@ -28,14 +28,16 @@
     "react-addons-css-transition-group": "^15.6.0",
     "react-addons-transition-group": "^15.6.0",
     "react-avatar": "^2.3.0",
+    "react-axios": "^1.0.3",
     "react-dom": "^15.4.2",
     "react-moment": "^0.6.1",
     "react-notification-system": "^0.2.15",
+    "react-redux": "^5.0.6",
     "react-router-dom": "^4.1.2",
     "reactstrap": "^4.8.0",
-    "sass-loader": "^6.0.2",
-    "ejs": "2.5.6",
-    "express": "4.15.2"
+    "redux": "^3.7.2",
+    "redux-promise": "^0.5.3",
+    "sass-loader": "^6.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",

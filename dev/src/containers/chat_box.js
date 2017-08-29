@@ -10,18 +10,16 @@ export default class ChatBox extends React.Component {
     super(props);
 
     this.state = {
-      name: '',
-      films: ''
+      message: ''
     };
   }
 
   componentDidMount(){
     axios
-      .get('https://www.swapi.co/api/people/1/')
+      .get('http://bernard-api.herokuapp.com/message/1')
       .then(({ data })=> {
       	this.setState({
-          name: data.name,
-          films: data.films
+          message: data.message
         });
       })
       .catch((err)=> {})
@@ -40,7 +38,7 @@ export default class ChatBox extends React.Component {
   return (
     <div>
       <ul>{listItems}</ul>
-      { this.state.name }
+      { this.state.message }
     </div>
   );
   }

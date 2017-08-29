@@ -8,7 +8,7 @@ export default class Header extends React.Component {
     return (
       <div>
         <header className="header">
-            <PrimaryHeader />
+            <PrimaryHeader menuOpen={false} />
             <SecondaryHeader />
         </header>
       </div>

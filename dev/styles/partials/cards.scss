@@ -19,6 +19,7 @@
     font-size: 14px;
     -webkit-box-shadow: 0 0 25px 0 rgba(0,0,0,.14);
     box-shadow: 0 0 25px 0 rgba(0,0,0,.14);
+    @include transition(transition, 0.5s)
     .profile-chat-card {
       .text-info {
         .name {

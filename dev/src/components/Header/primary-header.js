@@ -1,10 +1,13 @@
 import React from 'react';
 
-import HeaderLogo from './header-logo';
-import ProfilePicture from './../Profile/profile-picture';
+import HeaderLogo from './header-logo'
 import HeaderMenu from './header-menu';
+import HeaderProfile from './header-profile';
 
 export default class PrimaryHeader extends React.Component {
+
+
+
   render() {
     return (
       <div className="primary">
@@ -12,11 +15,7 @@ export default class PrimaryHeader extends React.Component {
               <div className="row header-row align-items-center">
                   <HeaderLogo />
                   <HeaderMenu />
-                  <div className="col col-lg-2 hidden-md-down user-profile-wrapper">
-                    <div className="user-profile">
-                      <ProfilePicture name="Harry Smith" size={65} />
-                    </div>
-                  </div>
+                  <HeaderProfile numberOfNotifications={1} />
                   </div>
               </div>
           </div>

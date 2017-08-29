@@ -9,3 +9,11 @@ $secondary: #1FD068;
 $dark: #2A2E32;
 $font: #8B9197;
 $lightborder: #F2F3F4;
+
+@mixin transition($prop, $values...) {
+  -moz-#{$prop}: $values;
+  -ms-#{$prop}: $values;
+  -o-#{$prop}: $values;
+  -webkit-#{$prop}: $values;
+  $prop: $values;
+}

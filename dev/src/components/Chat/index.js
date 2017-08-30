@@ -22,13 +22,11 @@ class ChatList extends React.Component {
     return (
       <div className="chat-main">
         {items.map(item =>
-          <Person key={item.message} person={item} />)}
+          <ChatBox key={item.message} messageContent={item.message} />)}
       </div>
     );
   }
 }
-
-const Person = (props) => <h4>{props.person.message}</h4>
 
 
 export default ChatList

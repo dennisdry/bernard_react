@@ -10,7 +10,9 @@ import ChatProfile from './chat-profile';
 const myArray = ["1", "2", "3"];
 
 export default class ChatBox extends React.Component {
-
+  constructor(props) {
+    super(props);
+  }
 
   render() {
   return (

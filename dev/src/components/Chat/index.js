@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { Request, Get, Post, Put, Delete, Head, Patch } from 'react-axios'
 import React from 'react';
+import FlipMove from 'react-flip-move';
 
 import ChatBox from './chat-box';
 
@@ -22,7 +23,9 @@ class ChatList extends React.Component {
     return (
       <div className="chat-main">
         {items.map(item =>
-          <ChatBox key={item.message} messageContent={item.message} />)}
+          <FlipMove maintainContainerHeight={true}>
+            <ChatBox key={item.message} messageContent={item.message} />)}
+          </FlipMove>
       </div>
     );
   }

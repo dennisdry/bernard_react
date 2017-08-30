@@ -5,7 +5,36 @@
   background-size: 50px 50px;
   border: none;
   cursor: pointer;
-  bottom: 15px;
-  right: 10%;
+  bottom: 25px;
+  right: 5%;
   position: fixed;
+}
+
+.WriteNewModal {
+  .createMessage-form {
+    .createMessage-form-textarea {
+      width: 100%;
+      height: auto;
+      border: 1px solid $lightborder;
+      border-radius: 4px;
+      padding: 4px;
+      height: 200px;
+      resize: none;
+    }
+  }
+  .WriteNewModal-footer {
+    .WriteNewModal-footer-submit {
+      background: $primary;
+      color: white;
+    }
+  }
+}
+
+.modal-dialog {
+  @include transition(transition, 0.5s)
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    width: 500px;
 }

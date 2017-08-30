@@ -38,3 +38,14 @@
     transform: translate(-50%, -50%) !important;
     width: 500px;
 }
+
+.modal-content {
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.modal-footer,
+.modal-header {
+  border-top: none !important;
+  border-bottom: none !important;
+}

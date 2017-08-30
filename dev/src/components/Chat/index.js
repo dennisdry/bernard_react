@@ -23,9 +23,9 @@ class ChatList extends React.Component {
     return (
       <div className="chat-main">
         {items.map(item =>
-          <FlipMove maintainContainerHeight={true}>
+
             <ChatBox key={item.message} messageContent={item.message} />)}
-          </FlipMove>
+
       </div>
     );
   }

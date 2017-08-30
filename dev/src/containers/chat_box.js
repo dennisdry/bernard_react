@@ -10,8 +10,18 @@ export default class ChatBox extends React.Component {
     super(props);
 
     this.state = {
-      message: ''
-    };
+      id: ,
+      message: '',
+      messageType: [
+        name: ''
+      ],
+      tags: [
+        name: '',
+        tagtype: [
+          name: ''
+        ]
+      ]
+    }
   }
 
   componentDidMount(){
@@ -19,7 +29,12 @@ export default class ChatBox extends React.Component {
       .get('http://bernard-api.herokuapp.com/message/1')
       .then(({ data })=> {
       	this.setState({
-          message: data.message
+          id: data.id,
+          message: data.message,
+          tags: [
+            name: data.tags.name
+          ]
+
         });
       })
       .catch((err)=> {})

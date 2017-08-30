@@ -11,24 +11,23 @@ class ChatList extends React.Component {
   }
 
   componentWillMount() {
-    fetch( 'http://bernard-api.herokuapp.com/message/findall' )
-    .then( response => response.json() )
-    .then( (message) => this.setState({items:message}) )
+    fetch( 'https://swapi.co/api/people/' )
+      .then( response => response.json() )
+      .then( ({results: items}) => this.setState({items}) )
   }
 
   render() {
     let items = this.state.items
-    console.log(items[0]);
+
     return (
       <div className="chat-main">
         {items.map(item =>
-          <Person key={item.message} person={item} />)}
+          <Person key={item.name} person={item} />)}
       </div>
     );
   }
 }
 
-const Person = (props) => <h4>{props.person.message}</h4>
-
+consts Person = (props) => <h4>{props.person.name}</h4>
 
 export default ChatList

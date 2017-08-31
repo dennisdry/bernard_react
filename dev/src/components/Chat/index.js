@@ -2,7 +2,8 @@ import axios from 'axios';
 import { Request, Get, Post, Put, Delete, Head, Patch } from 'react-axios'
 import React from 'react';
 import FlipMove from 'react-flip-move';
-import ReactTimeout from 'react-timeout'
+import ReactTimeout from 'react-timeout';
+const { ipcRenderer } = window.require('electron');
 
 import ReactQuill, { Quill, Mixin, Toolbar } from 'react-quill';
 
@@ -23,6 +24,9 @@ class ChatList extends React.Component {
     fetch( 'http://bernard-api.herokuapp.com/message/all' )
     .then( response => response.json() )
     .then( (message) => this.setState({items:message}) )
+
+    ipcRenderer.send("app:ready",this.state.items.length);
+
   }
 
   componentDidMount() {

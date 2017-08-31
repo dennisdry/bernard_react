@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import RichTextEditor from 'react-rte';
-
+import ChatList from './index';
 
 import RTEditor from './chat-rte';
 
@@ -51,6 +51,7 @@ export default class ChatCompose extends React.Component {
        });
 
       };
+
 
     postData() {
       this.handleSubmit();

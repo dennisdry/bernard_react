@@ -14,8 +14,8 @@ class ChatList extends React.Component {
     this.state = {items: []}
   }
 
-  componentWillMount() {
-    fetch( 'http://bernard-api.herokuapp.com/message/findall' )
+  componentDidMount() {
+    fetch( 'http://bernard-api.herokuapp.com/message/all' )
     .then( response => response.json() )
     .then( (message) => this.setState({items:message}) )
   }

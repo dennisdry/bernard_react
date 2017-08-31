@@ -17,8 +17,8 @@ export default class ChatCompose extends React.Component {
         value: RichTextEditor.createEmptyValue()
       };
 
-      this.logContent = this.logContent.bind(this);
       this.toggle = this.toggle.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
       this.postData = this.postData.bind(this)
     }
 
@@ -40,17 +40,21 @@ export default class ChatCompose extends React.Component {
       }
     };
 
-    logContent() {
 
-      const logcontent = this.state.value.toString('markdown')
-      console.log(logcontent);
-      this.setState({value: ''});
 
-    }
+    handleSubmit(){
+      const sendBodyContent = JSON.stringify({message: this.state.value.toString('markdown')})
+       fetch('http://bernard-api.herokuapp.com/message/send', {
+        method: 'post',
+        headers: {'Content-Type':'application/json'},
+        body: sendBodyContent
+       });
+
+      };
 
     postData() {
+      this.handleSubmit();
       this.toggle();
-      this.logContent();
     }
 
 

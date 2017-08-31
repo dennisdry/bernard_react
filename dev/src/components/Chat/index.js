@@ -3,7 +3,10 @@ import { Request, Get, Post, Put, Delete, Head, Patch } from 'react-axios'
 import React from 'react';
 import FlipMove from 'react-flip-move';
 
+import ReactQuill, { Quill, Mixin, Toolbar } from 'react-quill';
+
 import ChatBox from './chat-box';
+
 
 class ChatList extends React.Component {
   constructor() {
@@ -16,6 +19,9 @@ class ChatList extends React.Component {
     .then( response => response.json() )
     .then( (message) => this.setState({items:message}) )
   }
+
+
+
 
   render() {
     let items = this.state.items

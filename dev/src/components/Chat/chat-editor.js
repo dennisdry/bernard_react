@@ -8,16 +8,6 @@ import ReactQuill, { Quill, Mixin, Toolbar } from 'react-quill';
 const CustomButton = () => <span className="octicon octicon-star" />
 
 /*
- * Event handler to be attached using Quill toolbar module (see line 73)
- * https://quilljs.com/docs/modules/toolbar/
- */
-function insertStar () {
-  const cursorPosition = this.quill.getSelection().index
-  this.quill.insertText(cursorPosition, "★")
-  this.quill.setSelection(cursorPosition + 1)
-}
-
-/*
  * Custom toolbar component including insertStar button and dropdowns
  */
 const CustomToolbar = () => (
@@ -48,6 +38,8 @@ export default class Editor extends React.Component {
   }
 
   render() {
+
+
     return (
       <div className="text-editor">
         <CustomToolbar />
@@ -56,7 +48,7 @@ export default class Editor extends React.Component {
           placeholder={this.props.placeholder}
           modules={Editor.modules}
           formats={Editor.formats}
-          theme={"snow"} // pass false to use minimal theme
+          theme={"snow"}
         >
           <div
             key="editor"

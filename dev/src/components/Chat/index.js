@@ -6,6 +6,8 @@ import ReactTimeout from 'react-timeout'
 
 import ReactQuill, { Quill, Mixin, Toolbar } from 'react-quill';
 
+
+
 import ChatBox from './chat-box';
 
 
@@ -27,7 +29,7 @@ class ChatList extends React.Component {
     this.getMessagesFromApi();
     setInterval(() => {
       this.getMessagesFromApi();
-    }, 5000);
+    }, 1500);
   }
 
 
@@ -36,10 +38,10 @@ class ChatList extends React.Component {
     console.log(this.state.items);
     return (
       <div className="chat-main">
-        {items.map(item =>
-
-            <ChatBox key={item.message} messageContent={item.message} />)}
-
+      <FlipMove duration={450} easing="ease-out">
+        {items.reverse().map(item =>
+              <ChatBox key={item.id} msgId={item.id} messageContent={item.message} />)}
+            </FlipMove>
       </div>
     );
   }

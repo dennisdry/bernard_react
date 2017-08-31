@@ -30,7 +30,7 @@ export default class ChatBox extends React.Component {
                   </div>
 
                   <ChatContent message={this.props.messageContent} />
-                  <ChatActionBar />
+                  <ChatActionBar key={this.props.key} msgId={this.props.msgId} />
                 </div>
             </div>
         </div>

@@ -43,7 +43,7 @@ export default class ChatCompose extends React.Component {
 
 
     handleSubmit(){
-      const sendBodyContent = JSON.stringify({message: this.state.value.toString('markdown')})
+      const sendBodyContent = JSON.stringify({message: this.state.value.toString('html')})
        fetch('http://bernard-api.herokuapp.com/message/send', {
         method: 'post',
         headers: {'Content-Type':'application/json'},

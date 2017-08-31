@@ -14,7 +14,7 @@ export default class ChatBox extends React.Component {
                   <div className="card">
                     <div className="row top-row">
                         <div className="col-lg-6">
-                          <ChatProfile name="Harry Smith" company="Weener Berger" position="Weener tester" size={50} />
+                          <ChatProfile name="Harry Smith" company="CodeCool" position="Mentor" size={50} />
                         </div>
                         <div className="col-lg-6 text-right">
                           <ChatDate date="2017-08-26 14:01"/>

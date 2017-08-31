@@ -29,7 +29,7 @@ class ChatList extends React.Component {
     this.getMessagesFromApi();
     setInterval(() => {
       this.getMessagesFromApi();
-    }, 1500);
+    }, 5000);
   }
 
 

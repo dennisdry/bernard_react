@@ -8,6 +8,7 @@
   bottom: 25px;
   right: 5%;
   position: fixed;
+  z-index: 9999;
 }
 
 .WriteNewModal {
@@ -48,6 +49,17 @@
 .modal-header {
   border-top: none !important;
   border-bottom: none !important;
+}
+
+.message-body {
+  a {
+    color: $font;
+    text-decoration: none;
+    @include transition(transition, 0.5s)
+    &:hover {
+      color: $primary;
+    }
+  }
 }
 
 .RTEWrap {
